@@ -95,9 +95,9 @@ function updateActiveCard(activeTheme) {
 
 render();
 
-// 主题市场按钮：在新标签页打开
+// 主题市场按钮：跳转到线上主题市场
 document.getElementById('marketplaceBtn').addEventListener('click', () => {
-  chrome.tabs.create({ url: chrome.runtime.getURL('marketplace.html') });
+  chrome.tabs.create({ url: 'https://trae-skin.galaxyzhu.workers.dev/marketplace.html' });
 });
 
 // ============================================

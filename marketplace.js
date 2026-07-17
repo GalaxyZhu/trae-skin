@@ -218,9 +218,9 @@ function applyThemeToExtension(themeId) {
     var btn0 = document.querySelector('.theme-action[data-theme-id="' + themeId + '"]');
     if (btn0) {
       var orig0 = btn0.textContent;
-      btn0.textContent = '已应用';
-      btn0.style.opacity = '0.6';
-      setTimeout(function() { btn0.textContent = orig0; btn0.style.opacity = ''; }, 1500);
+      btn0.textContent = '✓ 已选，请在扩展中启用';
+      btn0.style.opacity = '0.7';
+      setTimeout(function() { btn0.textContent = orig0; btn0.style.opacity = ''; }, 2500);
     }
     return;
   }
