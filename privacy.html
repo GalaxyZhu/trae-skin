@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 — TRAE Work Skins</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d0d12;
+      color: #c8c8d8;
+      line-height: 1.8;
+      padding: 40px 20px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    h1 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .date { font-size: 13px; color: #6a6a80; margin-bottom: 32px; }
+    h2 {
+      font-size: 18px;
+      color: #e8e8f0;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+    p, li { font-size: 14px; margin-bottom: 8px; }
+    ul { padding-left: 20px; }
+    a { color: #7864ff; }
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 12px;
+      color: #4a4a60;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TRAE Work Skins 隐私政策</h1>
+    <p class="date">最后更新：2026 年 7 月 17 日</p>
+
+    <h2>概述</h2>
+    <p>TRAE Work Skins（以下简称"本扩展"）是一个浏览器扩展，用于为 TRAE Work 网页版（work.trae.cn）提供个性化皮肤主题。我们高度重视您的隐私。</p>
+
+    <h2>数据收集</h2>
+    <p>本扩展<strong>不收集、不存储、不上传</strong>任何用户个人信息。具体来说：</p>
+    <ul>
+      <li>不收集浏览历史、Cookie 或任何个人身份信息</li>
+      <li>不与任何服务器通信，不发送任何遥测数据</li>
+      <li>不包含任何分析、追踪或广告 SDK</li>
+      <li>所有主题切换和激活码验证均在用户本地浏览器中完成</li>
+    </ul>
+
+    <h2>本地存储</h2>
+    <p>本扩展使用 Chrome/Edge 的 <code>chrome.storage.local</code> API 在用户本地存储以下数据：</p>
+    <ul>
+      <li>当前选中的主题名称（如 "cyberpunk"、"sakura"）</li>
+      <li>已获取的主题列表</li>
+      <li>付费主题解锁状态（布尔值）</li>
+    </ul>
+    <p>这些数据仅存储在用户本地浏览器中，不会同步到云端，不会传输到任何服务器。用户可随时通过卸载扩展清除这些数据。</p>
+
+    <h2>权限说明</h2>
+    <ul>
+      <li><strong>storage</strong>：用于在本地保存用户的主题选择偏好</li>
+      <li><strong>activeTab</strong>：用于向当前打开的 work.trae.cn 页面注入主题 CSS 样式</li>
+    </ul>
+
+    <h2>第三方服务</h2>
+    <p>本扩展不使用任何第三方服务。主题市场页面（trae-skin.galaxyzhu.workers.dev）托管在 Cloudflare Pages 上，但该页面是纯静态网站，不收集用户数据。</p>
+
+    <h2>儿童隐私</h2>
+    <p>本扩展不针对 13 岁以下儿童，也不故意收集儿童的任何信息。</p>
+
+    <h2>变更通知</h2>
+    <p>如果本隐私政策发生变更，更新后的政策将发布在本页面，并更新顶部的日期。</p>
+
+    <h2>联系我们</h2>
+    <p>如有任何隐私相关问题，请通过以下方式联系：</p>
+    <ul>
+      <li>X.com: <a href="https://x.com/galaxyzhu" target="_blank">@galaxyzhu</a></li>
+      <li>GitHub: <a href="https://github.com/GalaxyZhu/trae-skin" target="_blank">GalaxyZhu/trae-skin</a></li>
+    </ul>
+
+    <div class="footer">
+      <p>© 2026 TRAE Work Skins · MIT License · 非官方第三方扩展，与 TRAE / 字节跳动无关联</p>
+    </div>
+  </div>
+</body>
+</html>
