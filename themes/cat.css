@@ -1,0 +1,270 @@
+/* ============================================
+   TRAE Work Skin: Cat 猫咪（图片背景）
+   ============================================ */
+
+:root {
+  --img-accent: #fbbf24;
+  --img-accent-alt: #34d399;
+  --img-text: #f5f0e0;
+  --img-text-muted: #9a8e70;
+  --img-border: rgba(251, 191, 36, 0.18);
+  --img-glow: rgba(251, 191, 36, 0.35);
+  --img-overlay: rgba(12, 10, 6, 0.80);
+  --img-overlay-light: rgba(18, 14, 8, 0.62);
+  --img-panel-bg: rgba(14, 12, 8, 0.72);
+  --img-card-bg: rgba(20, 16, 10, 0.65);
+}
+
+/* === 全局背景：图片 + 渐变蒙层 === */
+.layout-Uytjlx {
+  background:
+    linear-gradient(135deg, var(--img-overlay) 0%, var(--img-overlay-light) 50%, rgba(12, 10, 6, 0.50) 100%),
+    var(--dream-skin-art) center / cover no-repeat fixed !important;
+  background-color: #0c0a06 !important;
+}
+
+/* === 侧边栏：毛玻璃 === */
+.sidebar-MnFge4 {
+  background: var(--img-panel-bg) !important;
+  backdrop-filter: blur(20px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(120%) !important;
+  border-right: 1px solid var(--img-border) !important;
+}
+
+/* === 模式切换标签 === */
+.container-NkZPqY {
+  background: rgba(251, 191, 36, 0.08) !important;
+  border: 1px solid var(--img-border) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.indicator-q2vKKU {
+  background: var(--img-accent) !important;
+  box-shadow: 0 0 12px var(--img-glow) !important;
+}
+
+.tab-UWCly2 {
+  color: var(--img-text-muted) !important;
+}
+.tab-UWCly2:hover {
+  color: var(--img-accent) !important;
+}
+.tabActive-Cte0wF {
+  color: var(--img-accent) !important;
+}
+
+/* === 导航项 === */
+.navItem-TShDjL {
+  color: var(--img-text-muted) !important;
+  border-radius: 8px !important;
+  transition: all 0.25s ease !important;
+}
+.navItem-TShDjL:hover {
+  background: rgba(251, 191, 36, 0.10) !important;
+  color: var(--img-text) !important;
+}
+.navItemActive-CKlWeL {
+  background: rgba(251, 191, 36, 0.12) !important;
+  color: var(--img-accent) !important;
+  box-shadow: inset 3px 0 0 var(--img-accent) !important;
+}
+
+/* === 主内容区：透明 === */
+.contentWrapper-uQif4g,
+.workspace-W5Ai9G {
+  background-color: transparent !important;
+}
+
+/* === 欢迎标题 === */
+.traeWorkTitle-NeLV15,
+.welcomeTitleWrapper-Nkc8Z5,
+.titleText-TicDze {
+  background: linear-gradient(90deg, var(--img-accent), var(--img-accent-alt)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.withTraeText-yqECJz,
+.withTraeInner-PFaEAO {
+  color: var(--img-text) !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* === 输入框：毛玻璃 === */
+.chat-input-v2-container,
+.chat-input-v2-editor-part,
+.chat-input-v2-input-box-wrapper,
+.chat-input-v2-input-box--modern-scroll {
+  background: var(--img-card-bg) !important;
+  border: 1px solid var(--img-border) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(18px) saturate(115%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(115%) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.chat-input-v2-container:focus-within {
+  border-color: var(--img-accent) !important;
+  box-shadow: 0 0 25px var(--img-glow), 0 4px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.chat-input-v2-placeholder {
+  color: var(--img-text-muted) !important;
+}
+
+.chat-input-v2-input-box-editable,
+.chat-input-v2-input-box-editable * {
+  color: var(--img-text) !important;
+}
+
+/* === 发送按钮 === */
+.chat-input-v2-send-button:not(.disabled) {
+  background: linear-gradient(135deg, var(--img-accent), var(--img-accent-alt)) !important;
+  box-shadow: 0 0 15px var(--img-glow) !important;
+}
+
+/* === 登录按钮 === */
+.button-u4D__u.primary-RlrY7W {
+  background: linear-gradient(135deg, var(--img-accent), #f59e0b) !important;
+  color: #1a1208 !important;
+  border: none !important;
+  box-shadow: 0 0 12px var(--img-glow) !important;
+}
+
+/* === 下载按钮 === */
+.downloadBtn-VTdilg {
+  background: rgba(251, 191, 36, 0.10) !important;
+  border: 1px solid var(--img-border) !important;
+  color: var(--img-accent) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* === 场景标签 === */
+.sceneTabActive-IIuTAd {
+  background: rgba(251, 191, 36, 0.14) !important;
+  color: var(--img-accent) !important;
+  border-bottom: 2px solid var(--img-accent) !important;
+}
+.sceneTab-D9EdcT {
+  color: var(--img-text-muted) !important;
+  background: transparent !important;
+}
+.sceneTabText-MB4y73 {
+  color: inherit !important;
+}
+
+/* === 案例卡片：毛玻璃 === */
+.casesPanel-veumkb {
+  background: var(--img-card-bg) !important;
+  backdrop-filter: blur(16px) saturate(112%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(112%) !important;
+  border: 1px solid var(--img-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.caseCardImage-sZ5EhS {
+  background: rgba(28, 22, 12, 0.6) !important;
+}
+
+.caseCardViewBtn-M0VEBN,
+.caseCardAction-x8WUoT {
+  background: rgba(251, 191, 36, 0.14) !important;
+  color: var(--img-accent) !important;
+  border: 1px solid var(--img-border) !important;
+}
+
+.caseCardTitle-SXbvZY {
+  color: var(--img-text) !important;
+}
+
+/* === Beta 徽章 === */
+.betaBadge-kbRa7W {
+  background: rgba(52, 211, 153, 0.15) !important;
+  color: var(--img-accent-alt) !important;
+  border: 1px solid rgba(52, 211, 153, 0.3) !important;
+}
+
+/* === 工具栏 / 模型选择 === */
+.messageInputToolbarIconBtn {
+  color: var(--img-text-muted) !important;
+}
+.messageInputToolbarIconBtn:hover {
+  color: var(--img-accent) !important;
+}
+
+.model-select-area,
+.core-model-select-trigger,
+.core-model-select-trigger-value,
+.model-select-area-model,
+.disabledButtonWrapper-mliEjo,
+.disabledButton-Pc_KZz {
+  color: var(--img-text-muted) !important;
+}
+
+/* === 分割线 / 滚动条 === */
+.splitHandle-Ugp5UC {
+  background: var(--img-border) !important;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(251, 191, 36, 0.25); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(251, 191, 36, 0.45); }
+
+/* === 全局文字 === */
+.trae-icon {
+  color: var(--img-text-muted) !important;
+}
+
+.primaryText-AWNPY3,
+.projectsHeading-uUzPOv,
+.projectsEmptyText-pykWw2 {
+  color: var(--img-text) !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+.showcaseWrapper-EDiELX,
+.showcaseSection-gkwyMH,
+.container-ms_43G,
+.sceneTabs-dSlgRi {
+  color: var(--img-text) !important;
+}
+
+.casesPanelHeader-ohOJXn,
+.caseCardImageOverlay-vifOaF {
+  color: var(--img-text) !important;
+}
+
+/* === 页脚 === */
+.footer-oyCOhU {
+  background: var(--img-panel-bg) !important;
+  backdrop-filter: blur(16px) !important;
+  border-top: 1px solid var(--img-border) !important;
+}
+
+/* === 弹窗 === */
+.popoverContainer-cenLml,
+.popoverContent-sEAU8X {
+  background: var(--img-card-bg) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--img-border) !important;
+  color: var(--img-text) !important;
+}
+
+.header-oSoR0c,
+.title-Zq3Lcb {
+  color: var(--img-text) !important;
+}
+
+.descriptionWrapper-BEFCLm,
+.description-Rbe5o8 {
+  color: var(--img-text-muted) !important;
+}
+
+.footer-KWYeRR {
+  color: var(--img-text) !important;
+}

@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAE Skins — 主题市场</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   TRAE Skins Marketplace
+   Aesthetic: Art Gallery × Boutique Marketplace
+   ============================================ */
+
+:root {
+  --bg-base: #0a0a0c;
+  --bg-elevated: #121216;
+  --bg-card: #16161c;
+  --border: rgba(255,255,255,0.06);
+  --border-hover: rgba(255,255,255,0.12);
+  --text-primary: #f0f0f5;
+  --text-secondary: #8a8a9a;
+  --text-muted: #4a4a5a;
+  --accent-gold: #d4a843;
+  --accent-gold-soft: rgba(212, 168, 67, 0.12);
+  --accent-teal: #4fd1c5;
+  --accent-teal-soft: rgba(79, 209, 197, 0.10);
+  --radius: 14px;
+  --radius-sm: 10px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* === Navigation === */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  background: rgba(10, 10, 12, 0.72);
+  border-bottom: 1px solid var(--border);
+  transition: padding 0.3s ease;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.nav-logo-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #7864ff, #b45cff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(120, 100, 255, 0.25);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+.nav-link:hover { color: var(--text-primary); }
+
+.nav-cta {
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: var(--text-primary);
+  color: var(--bg-base);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(240, 240, 245, 0.15);
+}
+
+/* === Hero === */
+.hero {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 120px 40px 0;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -100px;
+  right: -150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(120, 100, 255, 0.08), transparent 70%);
+  animation: float 20s ease-in-out infinite;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  bottom: -100px;
+  left: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 168, 67, 0.06), transparent 70%);
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(40px, 30px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 720px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: var(--accent-teal-soft);
+  border: 1px solid rgba(79, 209, 197, 0.2);
+  font-size: 12px;
+  color: var(--accent-teal);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  box-shadow: 0 0 8px var(--accent-teal);
+}
+
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(48px, 7vw, 84px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.7s ease 0.1s both;
+}
+
+.hero-title em {
+  font-style: normal;
+  background: linear-gradient(135deg, #7864ff 0%, #b45cff 50%, #d4a843 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-desc {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto 40px;
+  animation: fadeUp 0.7s ease 0.2s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  animation: fadeUp 0.7s ease 0.3s both;
+}
+
+.btn-primary {
+  padding: 14px 28px;
+  border-radius: 10px;
+  background: var(--text-primary);
+  color: var(--bg-base);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(240, 240, 245, 0.2);
+}
+
+.btn-ghost {
+  padding: 14px 28px;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--border-hover);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.2);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 60px;
+  animation: fadeUp 0.7s ease 0.4s both;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.hero-stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Filter Bar === */
+.filter-section {
+  position: sticky;
+  top: 65px;
+  z-index: 50;
+  padding: 16px 40px;
+  background: rgba(10, 10, 12, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 7px 16px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-tab:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.filter-tab.active {
+  background: var(--text-primary);
+  color: var(--bg-base);
+  border-color: transparent;
+}
+
+.filter-tab .count {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.filter-search {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.filter-search input {
+  width: 200px;
+  padding: 8px 14px 8px 36px;
+  border-radius: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filter-search input:focus {
+  border-color: rgba(120, 100, 255, 0.4);
+}
+
+.filter-search input::placeholder {
+  color: var(--text-muted);
+}
+
+.filter-search svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: var(--text-muted);
+}
+
+/* === Showcase === */
+.showcase {
+  padding: 0 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+
+.showcase-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.showcase-title h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.showcase-title p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.showcase-stage {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-hover);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  background: #000;
+}
+
+/* Browser chrome */
+.showcase-chrome {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.03);
+  position: relative;
+}
+
+.showcase-chrome-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.showcase-chrome-dot:nth-child(1) { background: rgba(255,90,90,0.5); }
+.showcase-chrome-dot:nth-child(2) { background: rgba(255,180,60,0.5); }
+.showcase-chrome-dot:nth-child(3) { background: rgba(80,200,100,0.5); }
+
+.showcase-url {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+/* App body */
+.showcase-body {
+  display: flex;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.6s ease;
+}
+
+/* Sidebar */
+.showcase-sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: background 0.6s ease;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.showcase-sidebar-section {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin: 10px 4px 4px;
+  transition: color 0.6s ease;
+}
+
+.showcase-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  transition: all 0.6s ease;
+}
+
+.showcase-sidebar-item-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: background 0.6s ease;
+}
+
+.showcase-sidebar-item-text {
+  height: 6px;
+  border-radius: 3px;
+  width: 70%;
+  transition: background 0.6s ease;
+}
+
+.showcase-sidebar-item.active {
+  position: relative;
+}
+
+.showcase-sidebar-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  border-radius: 0 3px 3px 0;
+  transition: background 0.6s ease;
+}
+
+/* Main content */
+.showcase-main {
+  flex: 1;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  transition: background 0.6s ease;
+}
+
+.showcase-main-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  transition: all 0.6s ease;
+}
+
+.showcase-main-subtitle {
+  font-size: 13px;
+  transition: color 0.6s ease;
+}
+
+/* Input box */
+.showcase-input {
+  width: 80%;
+  max-width: 420px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 10px;
+  transition: all 0.6s ease;
+}
+
+.showcase-input-placeholder {
+  font-size: 12px;
+  transition: color 0.6s ease;
+}
+
+.showcase-input-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.showcase-input-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  transition: background 0.6s ease;
+}
+
+.showcase-input-send {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  transition: background 0.6s ease;
+}
+
+/* Scene tabs */
+.showcase-tabs {
+  display: flex;
+  gap: 20px;
+  margin-top: 4px;
+}
+
+.showcase-tab {
+  font-size: 12px;
+  font-weight: 500;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.6s ease;
+}
+
+.showcase-tab.active {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+/* Showcase controls */
+.showcase-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.showcase-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.showcase-dot.active {
+  width: 28px;
+  border-radius: 4px;
+  background: var(--text-primary);
+}
+
+/* Showcase label */
+.showcase-label {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  z-index: 10;
+  padding: 6px 14px;
+  border-radius: 8px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.5);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Syne', sans-serif;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.showcase-label.show {
+  opacity: 1;
+}
+
+/* === Theme Grid === */
+.marketplace {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.theme-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.2s, box-shadow 0.35s;
+  position: relative;
+  animation: cardReveal 0.5s ease both;
+}
+
+.theme-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-hover);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes cardReveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Browser Window Preview === */
+.theme-preview {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.theme-preview::before {
+  /* Browser chrome dots */
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  background-image:
+    radial-gradient(circle at 14px 14px, rgba(255,90,90,0.5) 4px, transparent 4.5px),
+    radial-gradient(circle at 32px 14px, rgba(255,180,60,0.5) 4px, transparent 4.5px),
+    radial-gradient(circle at 50px 14px, rgba(80,200,100,0.5) 4px, transparent 4.5px);
+}
+
+/* Mini sidebar inside preview */
+.theme-preview-sidebar {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+  gap: 10px;
+}
+
+.theme-preview-sidebar span {
+  width: 28px;
+  height: 6px;
+  border-radius: 3px;
+  opacity: 0.5;
+}
+
+.theme-preview-sidebar span:nth-child(1) { opacity: 0.8; width: 32px; }
+
+/* Mini content area inside preview */
+.theme-preview-content {
+  position: absolute;
+  top: 28px;
+  left: 56px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 1;
+  padding: 12px;
+}
+
+.theme-preview-title {
+  width: 60%;
+  height: 14px;
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+.theme-preview-line {
+  width: 45%;
+  height: 6px;
+  border-radius: 3px;
+  opacity: 0.3;
+}
+.theme-preview-line:nth-child(3) { width: 35%; }
+
+.theme-preview-input {
+  width: 70%;
+  height: 22px;
+  border-radius: 6px;
+  margin-top: 4px;
+  opacity: 0.4;
+}
+
+/* Price badge */
+.theme-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.theme-badge.free {
+  background: var(--accent-teal-soft);
+  color: var(--accent-teal);
+  border: 1px solid rgba(79, 209, 197, 0.25);
+}
+
+.theme-badge.premium {
+  background: linear-gradient(135deg, #ff5757, #ff8a3d);
+  color: #fff;
+  border: 1px solid rgba(255, 87, 87, 0.4);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 87, 87, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(255, 87, 87, 0); }
+}
+
+/* === Theme Info === */
+.theme-info {
+  padding: 18px 20px 20px;
+}
+
+.theme-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-name-en {
+  font-size: 11px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.theme-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.theme-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.theme-tag {
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  background: rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.theme-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.theme-price {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.theme-price.free { color: var(--accent-teal); }
+.theme-price.premium { color: var(--text-muted); text-decoration: line-through; font-size: 14px; opacity: 0.6; }
+.theme-price.coming { color: var(--text-muted); }
+
+.theme-price-free {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff5757;
+  margin-left: 4px;
+}
+
+.theme-action {
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.theme-action.free {
+  background: var(--accent-teal-soft);
+  color: var(--accent-teal);
+  border: 1px solid rgba(79, 209, 197, 0.2);
+}
+.theme-action.free:hover {
+  background: rgba(79, 209, 197, 0.18);
+}
+
+.theme-action.premium {
+  background: linear-gradient(135deg, #ff5757, #ff8a3d);
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  animation: btnPulse 2.5s ease-in-out infinite;
+}
+
+.theme-action.premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.theme-action.premium:hover::before {
+  left: 100%;
+}
+
+.theme-action.premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 87, 87, 0.4);
+}
+
+@keyframes btnPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 87, 87, 0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(255, 87, 87, 0); }
+}
+
+.theme-action.coming {
+  background: rgba(255,255,255,0.04);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  cursor: not-allowed;
+}
+
+.theme-action.unlocked {
+  background: rgba(74, 222, 128, 0.12);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  cursor: default;
+}
+
+/* === License Modal === */
+.license-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.license-modal-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.license-modal {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-hover);
+  border-radius: 18px;
+  padding: 36px 32px 28px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  transform: scale(0.92);
+  transition: transform 0.25s ease;
+  position: relative;
+}
+
+.license-modal-overlay.show .license-modal {
+  transform: scale(1);
+}
+
+.license-modal-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent-gold), rgba(212, 168, 67, 0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.license-modal-icon svg {
+  width: 22px;
+  height: 22px;
+  color: #1a1408;
+}
+
+.license-modal h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.license-modal p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.license-modal-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-hover);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: 'SF Mono', 'Monaco', monospace;
+  outline: none;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  transition: border-color 0.2s;
+}
+
+.license-modal-input::placeholder {
+  color: var(--text-muted);
+  letter-spacing: 0;
+}
+
+.license-modal-input:focus {
+  border-color: var(--accent-gold);
+}
+
+.license-modal-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent-gold), rgba(212, 168, 67, 0.8));
+  color: #1a1408;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.license-modal-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(212, 168, 67, 0.3);
+}
+
+.license-modal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.license-modal-msg {
+  font-size: 12px;
+  margin-top: 10px;
+  min-height: 16px;
+}
+
+.license-modal-msg.success { color: #4ade80; }
+.license-modal-msg.error { color: #f87171; }
+
+.license-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.04);
+  color: var(--text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.license-modal-close:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--text-primary);
+}
+
+.license-modal-price {
+  font-size: 13px;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+}
+
+.license-modal-price strong {
+  font-size: 22px;
+  font-family: 'Syne', sans-serif;
+}
+
+/* === Info Sections (Guide & About) === */
+.info-section {
+  padding: 80px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.info-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.info-section .section-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.guide-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.guide-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.guide-step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(120, 100, 255, 0.15), rgba(180, 92, 255, 0.1));
+  border: 1px solid rgba(120, 100, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.guide-step-content h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.guide-step-content p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.about-card {
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.about-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-card ul li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 2;
+  padding-left: 16px;
+  position: relative;
+}
+
+.about-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  opacity: 0.6;
+}
+
+.about-contact {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.about-contact-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-contact-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.about-contact-value a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.about-contact-value a:hover {
+  opacity: 0.7;
+}
+
+.about-disclaimer {
+  margin-top: 28px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 200, 100, 0.15);
+  background: rgba(255, 200, 100, 0.04);
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+
+.about-disclaimer strong {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.about-disclaimer .disclaimer-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.about-disclaimer .disclaimer-row:last-child {
+  margin-bottom: 0;
+}
+
+.about-disclaimer .disclaimer-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  opacity: 0.7;
+}
+
+.about-disclaimer .disclaimer-text {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+/* === Footer === */
+.footer {
+  padding: 60px 40px 40px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.footer-link {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-link:hover { color: var(--text-primary); }
+
+.footer-copy {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .nav { padding: 12px 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 100px 20px 60px; }
+  .hero-stats { gap: 24px; }
+  .filter-section { padding: 12px 20px; flex-direction: column; align-items: stretch; }
+  .filter-search input { width: 100%; }
+  .marketplace { padding: 24px 20px; }
+  .theme-grid { grid-template-columns: 1fr; gap: 20px; }
+  .footer { padding: 40px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-logo">
+    <div class="nav-logo-mark">T</div>
+    TRAE Skins
+  </div>
+  <div class="nav-links">
+    <a href="#marketplace" class="nav-link">主题市场</a>
+    <a href="#guide" class="nav-link">使用指南</a>
+    <a href="#about" class="nav-link">关于</a>
+  </div>
+  <a href="#" class="nav-cta">安装扩展</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-dot"></div>
+      为 TRAE Work 量身打造的皮肤主题
+    </div>
+    <h1 class="hero-title">给你的工作台<br>换一张<em>会呼吸的脸</em></h1>
+    <p class="hero-desc">精选设计师主题，从赛博霓虹到樱花初绽，从冷调人像到萌宠特写。一键切换，让每一次打开 TRAE Work 都成为视觉享受。</p>
+  </div>
+</section>
+
+<!-- Showcase: Live Theme Preview -->
+<section class="showcase">
+  <div class="showcase-stage">
+    <div class="showcase-chrome">
+      <div class="showcase-chrome-dot"></div>
+      <div class="showcase-chrome-dot"></div>
+      <div class="showcase-chrome-dot"></div>
+      <span class="showcase-url">work.trae.cn</span>
+    </div>
+    <div class="showcase-body" id="showcaseBody">
+      <div class="showcase-sidebar" id="showcaseSidebar">
+        <div class="showcase-sidebar-section">TRAE Work</div>
+        <div class="showcase-sidebar-item active">
+          <div class="showcase-sidebar-item-icon"></div>
+          <div class="showcase-sidebar-item-text"></div>
+        </div>
+        <div class="showcase-sidebar-item">
+          <div class="showcase-sidebar-item-icon"></div>
+          <div class="showcase-sidebar-item-text"></div>
+        </div>
+        <div class="showcase-sidebar-item">
+          <div class="showcase-sidebar-item-icon"></div>
+          <div class="showcase-sidebar-item-text"></div>
+        </div>
+        <div class="showcase-sidebar-section">最近</div>
+        <div class="showcase-sidebar-item">
+          <div class="showcase-sidebar-item-icon"></div>
+          <div class="showcase-sidebar-item-text"></div>
+        </div>
+        <div class="showcase-sidebar-item">
+          <div class="showcase-sidebar-item-icon"></div>
+          <div class="showcase-sidebar-item-text"></div>
+        </div>
+      </div>
+      <div class="showcase-main" id="showcaseMain">
+        <div class="showcase-main-title" id="showcaseTitle">Work with TRAE</div>
+        <div class="showcase-main-subtitle" id="showcaseSubtitle">帮你整理论文综述、编写 PPT、分析 Excel 等日常工作</div>
+        <div class="showcase-tabs" id="showcaseTabs">
+          <span class="showcase-tab active">生成 PPT</span>
+          <span class="showcase-tab">数据分析</span>
+          <span class="showcase-tab">深度研究</span>
+          <span class="showcase-tab">生成文档</span>
+        </div>
+        <div class="showcase-input" id="showcaseInput">
+          <span class="showcase-input-placeholder" id="showcasePlaceholder">输入你的需求…</span>
+          <div class="showcase-input-actions">
+            <div class="showcase-input-btn"></div>
+            <div class="showcase-input-btn"></div>
+          </div>
+          <div class="showcase-input-send" id="showcaseSend"></div>
+        </div>
+      </div>
+      <div class="showcase-label" id="showcaseLabel"></div>
+    </div>
+  </div>
+  <div class="showcase-controls" id="showcaseControls"></div>
+</section>
+
+<!-- Filter Bar -->
+<section class="filter-section" id="marketplace">
+  <div class="filter-tabs">
+    <button class="filter-tab active" data-filter="all">全部 <span class="count">10</span></button>
+    <button class="filter-tab" data-filter="free">免费 <span class="count">7</span></button>
+    <button class="filter-tab" data-filter="premium">付费 <span class="count">3</span></button>
+    <button class="filter-tab" data-filter="dark">深色</button>
+    <button class="filter-tab" data-filter="light">浅色</button>
+    <button class="filter-tab" data-filter="image">图片</button>
+  </div>
+  <div class="filter-search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input type="text" placeholder="搜索主题…" id="searchInput">
+  </div>
+</section>
+
+<!-- Theme Grid -->
+<main class="marketplace">
+  <div class="theme-grid" id="themeGrid">
+    <!-- Cards generated by JS -->
+  </div>
+</main>
+
+<!-- Guide Section -->
+<section class="info-section" id="guide">
+  <h2>使用指南</h2>
+  <p class="section-subtitle">四步上手，给你的 TRAE Work 换上新皮肤</p>
+  <div class="guide-steps">
+    <div class="guide-step">
+      <div class="guide-step-num">1</div>
+      <div class="guide-step-content">
+        <h3>安装扩展</h3>
+        <p>下载 TRAE Work Skins 扩展，在 Chrome / Edge 的「扩展程序」页面中，打开右上角「开发者模式」，点击「加载已解压的扩展程序」，选择本扩展文件夹即可完成安装。</p>
+      </div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-step-num">2</div>
+      <div class="guide-step-content">
+        <h3>选择主题</h3>
+        <p>点击浏览器工具栏中的扩展图标，在弹窗中选择你喜欢的主题。内置 4 款免费主题可以直接使用，更多主题可以在「主题市场」中获取。</p>
+      </div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-step-num">3</div>
+      <div class="guide-step-content">
+        <h3>从市场获取更多</h3>
+        <p>点击弹窗底部的「主题市场」按钮，浏览全部主题。免费主题点击「免费获取」即可直接使用；付费主题需要购买激活码解锁。</p>
+      </div>
+    </div>
+    <div class="guide-step">
+      <div class="guide-step-num">4</div>
+      <div class="guide-step-content">
+        <h3>解锁付费主题</h3>
+        <p>在主题市场点击付费主题的「购买解锁」按钮，完成支付后获取激活码。在弹窗底部点击「输入激活码」并粘贴，验证通过后全部 3 款付费主题永久解锁。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="info-section" id="about">
+  <h2>关于</h2>
+  <p class="section-subtitle">了解这个项目的故事</p>
+
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>项目简介</h3>
+      <p>TRAE Work Skins 是一个为 TRAE Work 网页版（work.trae.cn）量身打造的浏览器扩展，让用户可以一键切换不同的皮肤主题，将单调的工作界面变成赏心悦目的视觉体验。</p>
+    </div>
+    <div class="about-card">
+      <h3>技术特点</h3>
+      <ul>
+        <li>纯 CSS 注入，不修改页面原有功能</li>
+        <li>图片主题采用 Blob URL 技术，规避 CSP 限制</li>
+        <li>毛玻璃质感面板（backdrop-filter）</li>
+        <li>激活码本地验证，无需联网</li>
+      </ul>
+    </div>
+    <div class="about-card">
+      <h3>主题类型</h3>
+      <ul>
+        <li>纯色渐变主题（深色 / 浅色）</li>
+        <li>图片背景主题（人像 / 萌宠）</li>
+        <li>动画效果（霓虹扫描、花瓣飘落等）</li>
+        <li>持续更新中</li>
+      </ul>
+    </div>
+    <div class="about-card">
+      <h3>开放源码</h3>
+      <p>本项目基于 MIT 协议开源，欢迎开发者提交主题投稿或功能建议。如果你也设计了好看的主题，可以提交 Pull Request 加入主题市场。</p>
+    </div>
+  </div>
+
+  <div class="about-contact">
+    <div class="about-contact-label">作者</div>
+    <div class="about-contact-value">
+      Galaxy Zhu ·
+      <a href="https://x.com/galaxyzhu" target="_blank" rel="noopener">@galaxyzhu</a>
+    </div>
+  </div>
+
+  <div class="about-disclaimer">
+    <div class="disclaimer-row">
+      <span class="disclaimer-icon">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM8 5v4M8 11v.5"/></svg>
+      </span>
+      <span class="disclaimer-text">
+        <strong>声明与免责</strong>：TRAE Work Skins 是一个非官方的第三方浏览器扩展项目，与 TRAE / 字节跳动无任何关联，亦未获得其授权或认可。「TRAE」为字节跳动旗下产品的注册商标，本扩展仅在不修改页面功能的前提下注入 CSS 样式。
+      </span>
+    </div>
+    <div class="disclaimer-row">
+      <span class="disclaimer-icon">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.5"/><path d="M5.5 8l2 2 3-3.5"/></svg>
+      </span>
+      <span class="disclaimer-text">
+        <strong>学习用途</strong>：本网站及扩展仅供个人学习与技术交流使用，不得用于任何商业用途。如权利方认为本扩展内容侵犯其合法权益，请提供相关证明联系作者，将在确认后及时处理。
+      </span>
+    </div>
+    <div class="disclaimer-row">
+      <span class="disclaimer-icon">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l3 3 7-7"/></svg>
+      </span>
+      <span class="disclaimer-text">
+        <strong>隐私安全</strong>：本扩展不收集任何用户数据，不上传任何信息至服务器，所有主题切换与验证均在用户本地浏览器中完成。
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-logo">TRAE Skins</div>
+  <p class="footer-desc">为 TRAE Work 网页版打造的皮肤主题市场 · 非 TRAE 官方产品</p>
+  <div class="footer-links">
+    <a href="#marketplace" class="footer-link">主题市场</a>
+    <a href="#guide" class="footer-link">使用指南</a>
+    <a href="#about" class="footer-link">关于</a>
+  </div>
+  <div class="footer-copy">© 2026 TRAE Skins · MIT License</div>
+</footer>
+
+<!-- License Modal -->
+<div class="license-modal-overlay" id="licenseModalOverlay">
+  <div class="license-modal">
+    <button class="license-modal-close" id="licenseModalClose">×</button>
+    <div class="license-modal-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+    </div>
+    <h3>解锁付费主题</h3>
+    <p>购买激活码后输入，一键解锁全部 3 个付费主题</p>
+    <div class="license-modal-price">仅需 <strong>¥1.8</strong></div>
+    <input type="text" class="license-modal-input" id="licenseModalInput" placeholder="输入激活码">
+    <button class="license-modal-btn" id="licenseModalBtn">验证并解锁</button>
+    <div class="license-modal-msg" id="licenseModalMsg"></div>
+  </div>
+</div>
+
+<script src="license.js"></script>
+<script src="marketplace.js"></script>
+
+</body>
+</html>

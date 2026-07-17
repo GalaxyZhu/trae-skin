@@ -1,0 +1,10 @@
+# 激活码文件（含密钥，不可上传）
+codes.txt
+
+# 临时文件
+*.log
+.DS_Store
+node_modules/
+
+# Trae 工作目录
+.trae/

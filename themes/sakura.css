@@ -1,0 +1,212 @@
+/* ============================================
+   TRAE Work Skin: Sakura 樱花
+   ============================================ */
+
+:root {
+  --saku-bg: #fdf6f8;
+  --saku-bg-card: #fff0f3;
+  --saku-bg-hover: #fce4ec;
+  --saku-pink: #f472b6;
+  --saku-pink-light: #fbcfe8;
+  --saku-pink-deep: #ec4899;
+  --saku-gold: #d97706;
+  --saku-text: #4a2035;
+  --saku-text-muted: #a07088;
+  --saku-border: rgba(244, 114, 182, 0.18);
+}
+
+.layout-Uytjlx {
+  background-color: var(--saku-bg) !important;
+}
+
+.sidebar-MnFge4 {
+  background: linear-gradient(180deg, #fff5f7 0%, #fdf0f3 100%) !important;
+  border-right: 1px solid var(--saku-border) !important;
+}
+
+.container-NkZPqY {
+  background: rgba(244, 114, 182, 0.08) !important;
+  border: 1px solid var(--saku-border) !important;
+  border-radius: 10px !important;
+}
+
+.indicator-q2vKKU {
+  background: var(--saku-pink) !important;
+  box-shadow: 0 0 10px rgba(244, 114, 182, 0.3) !important;
+}
+
+.tab-UWCly2 {
+  color: var(--saku-text-muted) !important;
+}
+.tab-UWCly2:hover {
+  color: var(--saku-pink-deep) !important;
+}
+.tabActive-Cte0wF {
+  color: var(--saku-pink-deep) !important;
+}
+
+.navItem-TShDjL {
+  color: var(--saku-text-muted) !important;
+  border-radius: 8px !important;
+}
+.navItem-TShDjL:hover {
+  background: var(--saku-bg-hover) !important;
+  color: var(--saku-text) !important;
+}
+.navItemActive-CKlWeL {
+  background: var(--saku-bg-hover) !important;
+  color: var(--saku-pink-deep) !important;
+  box-shadow: inset 3px 0 0 var(--saku-pink) !important;
+}
+
+.contentWrapper-uQif4g,
+.workspace-W5Ai9G {
+  background-color: var(--saku-bg) !important;
+}
+
+.traeWorkTitle-NeLV15,
+.titleText-TicDze {
+  background: linear-gradient(90deg, var(--saku-pink-deep), var(--saku-pink), var(--saku-gold)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.withTraeText-yqECJz {
+  color: var(--saku-text) !important;
+}
+
+.chat-input-v2-container,
+.chat-input-v2-editor-part,
+.chat-input-v2-input-box-wrapper,
+.chat-input-v2-input-box--modern-scroll {
+  background-color: var(--saku-bg-card) !important;
+  border: 1px solid var(--saku-border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 20px rgba(244, 114, 182, 0.08) !important;
+}
+
+.chat-input-v2-container:focus-within {
+  border-color: rgba(244, 114, 182, 0.35) !important;
+  box-shadow: 0 0 25px rgba(244, 114, 182, 0.12) !important;
+}
+
+.chat-input-v2-placeholder {
+  color: var(--saku-text-muted) !important;
+}
+
+.chat-input-v2-input-box-editable,
+.chat-input-v2-input-box-editable * {
+  color: var(--saku-text) !important;
+}
+
+.chat-input-v2-send-button:not(.disabled) {
+  background: linear-gradient(135deg, var(--saku-pink), var(--saku-pink-deep)) !important;
+  box-shadow: 0 0 14px rgba(244, 114, 182, 0.3) !important;
+  color: #fff !important;
+}
+
+.button-u4D__u.primary-RlrY7W {
+  background: linear-gradient(135deg, var(--saku-pink), var(--saku-pink-deep)) !important;
+  color: #fff !important;
+}
+
+.downloadBtn-VTdilg {
+  background: rgba(244, 114, 182, 0.08) !important;
+  border: 1px solid var(--saku-border) !important;
+  color: var(--saku-pink-deep) !important;
+}
+
+.sceneTabActive-IIuTAd {
+  background: var(--saku-bg-hover) !important;
+  color: var(--saku-pink-deep) !important;
+  border-bottom: 2px solid var(--saku-pink) !important;
+}
+.sceneTab-D9EdcT {
+  color: var(--saku-text-muted) !important;
+  background: transparent !important;
+}
+
+.casesPanel-veumkb {
+  background: var(--saku-bg-card) !important;
+  border: 1px solid var(--saku-border) !important;
+  border-radius: 14px !important;
+}
+
+.caseCardImage-sZ5EhS {
+  background: var(--saku-bg-hover) !important;
+}
+
+.caseCardViewBtn-M0VEBN,
+.caseCardAction-x8WUoT {
+  background: rgba(244, 114, 182, 0.1) !important;
+  color: var(--saku-pink-deep) !important;
+}
+
+.caseCardTitle-SXbvZY {
+  color: var(--saku-text) !important;
+}
+
+.betaBadge-kbRa7W {
+  background: rgba(217, 119, 6, 0.1) !important;
+  color: var(--saku-gold) !important;
+  border: 1px solid rgba(217, 119, 6, 0.2) !important;
+}
+
+.messageInputToolbarIconBtn {
+  color: var(--saku-text-muted) !important;
+}
+.messageInputToolbarIconBtn:hover {
+  color: var(--saku-pink-deep) !important;
+}
+
+.splitHandle-Ugp5UC {
+  background: var(--saku-border) !important;
+}
+
+.trae-icon {
+  color: var(--saku-text-muted) !important;
+}
+
+.primaryText-AWNPY3,
+.projectsHeading-uUzPOv,
+.projectsEmptyText-pykWw2 {
+  color: var(--saku-text) !important;
+}
+
+.footer-oyCOhU {
+  background: #fff5f7 !important;
+  border-top: 1px solid var(--saku-border) !important;
+}
+
+/* 飘落花瓣 */
+@keyframes petal-fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+.layout-Uytjlx::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(3px 3px at 20% 0%, rgba(244, 114, 182, 0.3), transparent),
+    radial-gradient(2px 4px at 50% 0%, rgba(251, 207, 232, 0.4), transparent),
+    radial-gradient(3px 3px at 80% 0%, rgba(244, 114, 182, 0.25), transparent),
+    radial-gradient(2px 3px at 35% 0%, rgba(251, 207, 232, 0.3), transparent),
+    radial-gradient(3px 2px at 65% 0%, rgba(244, 114, 182, 0.35), transparent);
+  background-size: 100% 100%;
+  animation: petal-fall 15s linear infinite;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--saku-bg); }
+::-webkit-scrollbar-thumb { background: rgba(244, 114, 182, 0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(244, 114, 182, 0.4); }

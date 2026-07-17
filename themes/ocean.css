@@ -1,0 +1,255 @@
+/* ============================================
+   TRAE Work Skin: Ocean 深海
+   ============================================ */
+
+:root {
+  --ocean-bg: #060d16;
+  --ocean-bg-card: #0c1623;
+  --ocean-bg-elevated: #112033;
+  --ocean-cyan: #22d3ee;
+  --ocean-blue: #3b82f6;
+  --ocean-deep: #1e40af;
+  --ocean-text: #d0e8f8;
+  --ocean-text-muted: #5a7d9a;
+  --ocean-border: rgba(34, 211, 238, 0.1);
+  --ocean-glow: rgba(34, 211, 238, 0.2);
+}
+
+.layout-Uytjlx {
+  background-color: var(--ocean-bg) !important;
+}
+
+.sidebar-MnFge4 {
+  background: linear-gradient(180deg, #08111c 0%, #060d16 100%) !important;
+  border-right: 1px solid var(--ocean-border) !important;
+}
+
+.container-NkZPqY {
+  background: rgba(34, 211, 238, 0.05) !important;
+  border: 1px solid var(--ocean-border) !important;
+  border-radius: 10px !important;
+}
+
+.indicator-q2vKKU {
+  background: linear-gradient(90deg, var(--ocean-cyan), var(--ocean-blue)) !important;
+  box-shadow: 0 0 12px var(--ocean-glow) !important;
+}
+
+.tab-UWCly2 {
+  color: var(--ocean-text-muted) !important;
+}
+.tab-UWCly2:hover {
+  color: var(--ocean-cyan) !important;
+}
+.tabActive-Cte0wF {
+  color: var(--ocean-cyan) !important;
+}
+
+.navItem-TShDjL {
+  color: var(--ocean-text-muted) !important;
+  border-radius: 8px !important;
+}
+.navItem-TShDjL:hover {
+  background: rgba(34, 211, 238, 0.06) !important;
+  color: var(--ocean-text) !important;
+}
+.navItemActive-CKlWeL {
+  background: rgba(34, 211, 238, 0.08) !important;
+  color: var(--ocean-cyan) !important;
+  box-shadow: inset 3px 0 0 var(--ocean-cyan) !important;
+}
+
+.contentWrapper-uQif4g,
+.workspace-W5Ai9G {
+  background-color: var(--ocean-bg) !important;
+}
+
+.traeWorkTitle-NeLV15,
+.titleText-TicDze {
+  background: linear-gradient(90deg, var(--ocean-cyan), var(--ocean-blue), #60a5fa) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.withTraeText-yqECJz,
+.withTraeInner-PFaEAO {
+  color: var(--ocean-text) !important;
+}
+
+.chat-input-v2-container,
+.chat-input-v2-editor-part,
+.chat-input-v2-input-box-wrapper,
+.chat-input-v2-input-box--modern-scroll {
+  background-color: var(--ocean-bg-card) !important;
+  border: 1px solid var(--ocean-border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 30px rgba(34, 211, 238, 0.05), 0 0 60px rgba(59, 130, 246, 0.03) !important;
+}
+
+.chat-input-v2-container:focus-within {
+  border-color: rgba(34, 211, 238, 0.25) !important;
+  box-shadow: 0 0 35px var(--ocean-glow) !important;
+}
+
+.chat-input-v2-placeholder {
+  color: var(--ocean-text-muted) !important;
+}
+
+.chat-input-v2-input-box-editable,
+.chat-input-v2-input-box-editable * {
+  color: var(--ocean-text) !important;
+}
+
+.chat-input-v2-send-button:not(.disabled) {
+  background: linear-gradient(135deg, var(--ocean-cyan), var(--ocean-blue)) !important;
+  box-shadow: 0 0 16px var(--ocean-glow) !important;
+  color: #060d16 !important;
+}
+
+.button-u4D__u.primary-RlrY7W {
+  background: linear-gradient(135deg, var(--ocean-cyan), var(--ocean-blue)) !important;
+  color: #060d16 !important;
+}
+
+.downloadBtn-VTdilg {
+  background: rgba(34, 211, 238, 0.06) !important;
+  border: 1px solid var(--ocean-border) !important;
+  color: var(--ocean-cyan) !important;
+}
+
+.sceneTabActive-IIuTAd {
+  background: rgba(34, 211, 238, 0.08) !important;
+  color: var(--ocean-cyan) !important;
+  border-bottom: 2px solid var(--ocean-cyan) !important;
+}
+.sceneTab-D9EdcT {
+  color: var(--ocean-text-muted) !important;
+  background: transparent !important;
+}
+
+.casesPanel-veumkb {
+  background: var(--ocean-bg-card) !important;
+  border: 1px solid var(--ocean-border) !important;
+  border-radius: 14px !important;
+}
+
+.caseCardImage-sZ5EhS {
+  background: var(--ocean-bg-elevated) !important;
+}
+
+.caseCardViewBtn-M0VEBN,
+.caseCardAction-x8WUoT {
+  background: rgba(34, 211, 238, 0.1) !important;
+  color: var(--ocean-cyan) !important;
+}
+
+.caseCardTitle-SXbvZY {
+  color: var(--ocean-text) !important;
+}
+
+.betaBadge-kbRa7W {
+  background: rgba(59, 130, 246, 0.12) !important;
+  color: #60a5fa !important;
+}
+
+.messageInputToolbarIconBtn {
+  color: var(--ocean-text-muted) !important;
+}
+.messageInputToolbarIconBtn:hover {
+  color: var(--ocean-cyan) !important;
+}
+
+.splitHandle-Ugp5UC {
+  background: var(--ocean-border) !important;
+}
+
+.trae-icon {
+  color: var(--ocean-text-muted) !important;
+}
+
+.primaryText-AWNPY3,
+.projectsHeading-uUzPOv,
+.projectsEmptyText-pykWw2 {
+  color: var(--ocean-text) !important;
+}
+
+.footer-oyCOhU {
+  background: #08111c !important;
+  border-top: 1px solid var(--ocean-border) !important;
+}
+
+/* === 修复：黑色文字在深色主题下不可读 === */
+
+.sceneTabText-MB4y73 {
+  color: inherit !important;
+}
+
+.core-model-select-trigger,
+.core-model-select-trigger-value,
+.model-select-area,
+.model-select-area-model,
+.disabledButtonWrapper-mliEjo,
+.disabledButton-Pc_KZz {
+  color: var(--ocean-text-muted) !important;
+}
+
+.showcaseWrapper-EDiELX,
+.showcaseSection-gkwyMH,
+.container-ms_43G,
+.sceneTabs-dSlgRi {
+  color: var(--ocean-text) !important;
+}
+
+.casesPanelHeader-ohOJXn {
+  color: var(--ocean-text) !important;
+}
+
+.caseCardImageOverlay-vifOaF {
+  color: var(--ocean-text) !important;
+}
+
+.popoverContainer-cenLml,
+.popoverContent-sEAU8X {
+  background: var(--ocean-bg-card) !important;
+  border: 1px solid var(--ocean-border) !important;
+  color: var(--ocean-text) !important;
+}
+
+.header-oSoR0c,
+.title-Zq3Lcb {
+  color: var(--ocean-text) !important;
+}
+
+.descriptionWrapper-BEFCLm,
+.description-Rbe5o8 {
+  color: var(--ocean-text-muted) !important;
+}
+
+.footer-KWYeRR {
+  color: var(--ocean-text) !important;
+}
+
+/* 水波纹氛围 */
+.layout-Uytjlx::before {
+  content: '';
+  position: fixed;
+  bottom: -20%;
+  left: -10%;
+  width: 120%;
+  height: 60%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse at center, rgba(34, 211, 238, 0.04) 0%, transparent 60%);
+  animation: ocean-wave 10s ease-in-out infinite alternate;
+}
+
+@keyframes ocean-wave {
+  0% { transform: translateX(-2%) translateY(0); opacity: 0.6; }
+  100% { transform: translateX(2%) translateY(-10px); opacity: 1; }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--ocean-bg); }
+::-webkit-scrollbar-thumb { background: rgba(34, 211, 238, 0.18); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(34, 211, 238, 0.35); }

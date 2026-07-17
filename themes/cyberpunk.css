@@ -1,0 +1,307 @@
+/* ============================================
+   TRAE Work Skin: Cyberpunk 赛博朋克
+   ============================================ */
+
+:root {
+  --skin-bg-primary: #0a0a0f;
+  --skin-bg-secondary: #12121a;
+  --skin-bg-tertiary: #1a1a2e;
+  --skin-bg-card: #16162a;
+  --skin-accent: #00f0ff;
+  --skin-accent-alt: #ff00aa;
+  --skin-text: #e0e0ff;
+  --skin-text-muted: #7a7a9e;
+  --skin-border: rgba(0, 240, 255, 0.15);
+  --skin-glow: rgba(0, 240, 255, 0.4);
+  --skin-glow-alt: rgba(255, 0, 170, 0.3);
+}
+
+/* 全局背景 */
+.layout-Uytjlx {
+  background-color: var(--skin-bg-primary) !important;
+}
+
+/* 侧边栏 */
+.sidebar-MnFge4 {
+  background: linear-gradient(180deg, var(--skin-bg-secondary) 0%, var(--skin-bg-primary) 100%) !important;
+  border-right: 1px solid var(--skin-border) !important;
+}
+
+/* 模式切换标签 */
+.container-NkZPqY {
+  background: rgba(0, 240, 255, 0.06) !important;
+  border: 1px solid var(--skin-border) !important;
+  border-radius: 8px !important;
+}
+
+.indicator-q2vKKU {
+  background: var(--skin-accent) !important;
+  box-shadow: 0 0 12px var(--skin-glow) !important;
+}
+
+.tab-UWCly2 {
+  color: var(--skin-text-muted) !important;
+  text-shadow: none !important;
+}
+.tab-UWCly2:hover {
+  color: var(--skin-accent) !important;
+  text-shadow: 0 0 8px var(--skin-glow) !important;
+}
+.tabActive-Cte0wF {
+  color: var(--skin-accent) !important;
+  text-shadow: 0 0 10px var(--skin-glow) !important;
+}
+
+/* 导航项 */
+.navItem-TShDjL {
+  color: var(--skin-text-muted) !important;
+  border-radius: 8px !important;
+  transition: all 0.25s ease !important;
+}
+.navItem-TShDjL:hover {
+  background: rgba(0, 240, 255, 0.08) !important;
+  color: var(--skin-text) !important;
+}
+.navItemActive-CKlWeL {
+  background: rgba(0, 240, 255, 0.1) !important;
+  color: var(--skin-accent) !important;
+  box-shadow: inset 3px 0 0 var(--skin-accent) !important;
+}
+
+/* 主内容区 */
+.contentWrapper-uQif4g,
+.workspace-W5Ai9G {
+  background-color: var(--skin-bg-primary) !important;
+}
+
+/* 欢迎标题 */
+.traeWorkTitle-NeLV15,
+.welcomeTitleWrapper-Nkc8Z5,
+.titleText-TicDze {
+  background: linear-gradient(90deg, var(--skin-accent), var(--skin-accent-alt), var(--skin-accent)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 0 20px var(--skin-glow)) !important;
+}
+
+.withTraeText-yqECJz,
+.withTraeInner-PFaEAO {
+  color: var(--skin-text) !important;
+}
+
+/* 输入框 */
+.chat-input-v2-container,
+.chat-input-v2-editor-part,
+.chat-input-v2-input-box-wrapper,
+.chat-input-v2-input-box--modern-scroll {
+  background-color: var(--skin-bg-card) !important;
+  border: 1px solid var(--skin-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.08), inset 0 0 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.chat-input-v2-container:focus-within {
+  border-color: var(--skin-accent) !important;
+  box-shadow: 0 0 25px var(--skin-glow), inset 0 0 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.chat-input-v2-placeholder {
+  color: var(--skin-text-muted) !important;
+}
+
+.chat-input-v2-input-box-editable,
+.chat-input-v2-input-box-editable * {
+  color: var(--skin-text) !important;
+}
+
+/* 发送按钮 */
+.chat-input-v2-send-button:not(.disabled) {
+  background: linear-gradient(135deg, var(--skin-accent), var(--skin-accent-alt)) !important;
+  box-shadow: 0 0 15px var(--skin-glow) !important;
+}
+.chat-input-v2-send-button:not(.disabled):hover {
+  box-shadow: 0 0 25px var(--skin-glow), 0 0 50px var(--skin-glow-alt) !important;
+  transform: scale(1.05) !important;
+}
+
+/* 登录按钮 */
+.button-u4D__u.primary-RlrY7W {
+  background: linear-gradient(135deg, var(--skin-accent), #0080ff) !important;
+  color: #000 !important;
+  border: none !important;
+  box-shadow: 0 0 12px var(--skin-glow) !important;
+}
+
+/* 下载按钮 */
+.downloadBtn-VTdilg {
+  background: rgba(0, 240, 255, 0.08) !important;
+  border: 1px solid var(--skin-border) !important;
+  color: var(--skin-accent) !important;
+}
+
+/* 场景标签 */
+.sceneTabActive-IIuTAd {
+  background: rgba(0, 240, 255, 0.12) !important;
+  color: var(--skin-accent) !important;
+  border-bottom: 2px solid var(--skin-accent) !important;
+}
+.sceneTab-D9EdcT {
+  color: var(--skin-text-muted) !important;
+  background: transparent !important;
+}
+
+/* 案例卡片 */
+.casesPanel-veumkb {
+  background: var(--skin-bg-card) !important;
+  border: 1px solid var(--skin-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.caseCardImage-sZ5EhS {
+  background: var(--skin-bg-tertiary) !important;
+}
+
+.caseCardViewBtn-M0VEBN,
+.caseCardAction-x8WUoT {
+  background: rgba(0, 240, 255, 0.15) !important;
+  color: var(--skin-accent) !important;
+  border: 1px solid var(--skin-border) !important;
+}
+
+.caseCardTitle-SXbvZY {
+  color: var(--skin-text) !important;
+}
+
+/* Beta 徽章 */
+.betaBadge-kbRa7W {
+  background: rgba(255, 0, 170, 0.15) !important;
+  color: var(--skin-accent-alt) !important;
+  border: 1px solid rgba(255, 0, 170, 0.3) !important;
+}
+
+/* 工具栏图标按钮 */
+.messageInputToolbarIconBtn {
+  color: var(--skin-text-muted) !important;
+}
+.messageInputToolbarIconBtn:hover {
+  color: var(--skin-accent) !important;
+}
+
+/* 模型选择 */
+.model-select-area {
+  color: var(--skin-text-muted) !important;
+}
+
+/* 分割线 */
+.splitHandle-Ugp5UC {
+  background: var(--skin-border) !important;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--skin-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.45);
+}
+
+/* 扫描线动画 */
+.layout-Uytjlx::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 240, 255, 0.015) 2px,
+    rgba(0, 240, 255, 0.015) 4px
+  );
+}
+
+/* 全局文字 */
+.trae-icon {
+  color: var(--skin-text-muted) !important;
+}
+
+.primaryText-AWNPY3,
+.projectsHeading-uUzPOv,
+.projectsEmptyText-pykWw2 {
+  color: var(--skin-text) !important;
+}
+
+.footer-oyCOhU {
+  background: var(--skin-bg-secondary) !important;
+  border-top: 1px solid var(--skin-border) !important;
+}
+
+/* === 修复：黑色文字在深色主题下不可读 === */
+
+/* 场景标签文字（生成PPT/数据分析/深度研究/生成文档） */
+.sceneTabText-MB4y73 {
+  color: inherit !important;
+}
+
+/* 模型选择器 "Auto Mode" */
+.core-model-select-trigger,
+.core-model-select-trigger-value,
+.model-select-area,
+.model-select-area-model,
+.disabledButtonWrapper-mliEjo,
+.disabledButton-Pc_KZz {
+  color: var(--skin-text-muted) !important;
+}
+
+/* 展示区容器 */
+.showcaseWrapper-EDiELX,
+.showcaseSection-gkwyMH,
+.container-ms_43G,
+.sceneTabs-dSlgRi {
+  color: var(--skin-text) !important;
+}
+
+/* 案例面板标题 */
+.casesPanelHeader-ohOJXn {
+  color: var(--skin-text) !important;
+}
+
+/* 案例卡片图片覆盖层 */
+.caseCardImageOverlay-vifOaF {
+  color: var(--skin-text) !important;
+}
+
+/* 登录提示弹窗 */
+.popoverContainer-cenLml,
+.popoverContent-sEAU8X {
+  background: var(--skin-bg-card) !important;
+  border: 1px solid var(--skin-border) !important;
+  color: var(--skin-text) !important;
+}
+
+.header-oSoR0c,
+.title-Zq3Lcb {
+  color: var(--skin-text) !important;
+}
+
+.descriptionWrapper-BEFCLm,
+.description-Rbe5o8 {
+  color: var(--skin-text-muted) !important;
+}
+
+.footer-KWYeRR {
+  color: var(--skin-text) !important;
+}
