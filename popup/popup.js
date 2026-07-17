@@ -14,6 +14,9 @@ const EXTRA_THEMES = {
   'handsome':{ id: 'handsome',name: '帅哥', desc: '冷调人像，毛玻璃质感', image: true },
   'beauty':  { id: 'beauty',  name: '美女', desc: '暖色人像，霓虹氛围', image: true },
   'cat':     { id: 'cat',     name: '猫咪', desc: '萌宠特写，琥珀瞳色', image: true },
+  'cats':    { id: 'cats',    name: '猫咪合集', desc: '好多可爱猫咪，暖橙色调', image: true },
+  'puppy':   { id: 'puppy',   name: '小狗', desc: '金毛小狗，温暖治愈', image: true },
+  'oceanworld': { id: 'oceanworld', name: '海洋世界', desc: '珊瑚礁与热带鱼，水下奇境', image: true },
 };
 
 const STORAGE_KEY = 'trae_skin_active';

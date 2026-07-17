@@ -4,7 +4,7 @@
 const STORAGE_KEY = 'trae_skin_active';
 
 // 预加载所有主题
-const THEMES = ['cyberpunk', 'forest', 'sunset', 'midnight', 'ocean', 'sakura', 'handsome', 'beauty', 'cat'];
+const THEMES = ['cyberpunk', 'forest', 'sunset', 'midnight', 'ocean', 'sakura', 'handsome', 'beauty', 'cat', 'cats', 'puppy', 'oceanworld'];
 const themeCache = {};
 
 // 图片主题配置：映射主题名到图片文件路径
@@ -12,6 +12,9 @@ const IMAGE_THEMES = {
   'handsome': { image: 'themes/images/handsome.jpg' },
   'beauty':   { image: 'themes/images/beauty.jpg' },
   'cat':      { image: 'themes/images/cat.jpg' },
+  'cats':     { image: 'themes/images/cats.jpg' },
+  'puppy':    { image: 'themes/images/puppy.jpg' },
+  'oceanworld': { image: 'themes/images/oceanworld.jpg' },
 };
 
 // 缓存已创建的 Blob URL，避免重复加载

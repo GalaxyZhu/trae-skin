@@ -49,6 +49,30 @@ const THEMES = [
     preview: { bg: 'linear-gradient(135deg, rgba(12,10,6,0.8), rgba(18,14,8,0.5))', sidebar: 'rgba(14,12,8,0.7)', title: 'linear-gradient(90deg, #fbbf24, #34d399)', line: 'rgba(251,191,36,0.2)', input: 'rgba(20,16,10,0.6)', accent: '#fbbf24', image: 'themes/images/cat.jpg' }
   },
   {
+    id: 'cats', name: '猫咪合集', nameEn: 'Cats',
+    desc: '好多可爱的猫咪，各种品种各种颜色，暖橙色调的萌宠天堂。',
+    tags: ['图片', '深色', '毛玻璃', '萌宠'], category: 'premium', type: 'image',
+    price: '¥1.8',
+    image: 'themes/images/cats.jpg',
+    preview: { bg: 'linear-gradient(135deg, rgba(14,10,6,0.8), rgba(20,14,8,0.5))', sidebar: 'rgba(16,12,8,0.7)', title: 'linear-gradient(90deg, #f59e0b, #fb923c)', line: 'rgba(245,158,11,0.2)', input: 'rgba(22,16,10,0.6)', accent: '#f59e0b', image: 'themes/images/cats.jpg' }
+  },
+  {
+    id: 'puppy', name: '小狗', nameEn: 'Puppy',
+    desc: '金毛小狗在夕阳沙滩上，温暖治愈的陪伴。',
+    tags: ['图片', '深色', '毛玻璃', '萌宠'], category: 'premium', type: 'image',
+    price: '¥1.8',
+    image: 'themes/images/puppy.jpg',
+    preview: { bg: 'linear-gradient(135deg, rgba(16,12,6,0.78), rgba(22,16,8,0.6))', sidebar: 'rgba(18,14,8,0.7)', title: 'linear-gradient(90deg, #fbbf24, #f97316)', line: 'rgba(251,191,36,0.2)', input: 'rgba(24,18,10,0.6)', accent: '#fbbf24', image: 'themes/images/puppy.jpg' }
+  },
+  {
+    id: 'oceanworld', name: '海洋世界', nameEn: 'Ocean World',
+    desc: '珊瑚礁与热带鱼，阳光穿透深蓝海水的水下奇境。',
+    tags: ['图片', '深色', '毛玻璃', '自然'], category: 'premium', type: 'image',
+    price: '¥1.8',
+    image: 'themes/images/oceanworld.jpg',
+    preview: { bg: 'linear-gradient(135deg, rgba(4,12,24,0.8), rgba(8,18,36,0.5))', sidebar: 'rgba(6,16,30,0.7)', title: 'linear-gradient(90deg, #22d3ee, #3b82f6)', line: 'rgba(34,211,238,0.2)', input: 'rgba(10,22,38,0.6)', accent: '#22d3ee', image: 'themes/images/oceanworld.jpg' }
+  },
+  {
     id: 'cyberpunk', name: '赛博朋克', nameEn: 'Cyberpunk',
     desc: '霓虹扫描线，深色科技感。青色与品红的碰撞，在暗夜中闪烁。',
     tags: ['深色', '动画', '科技感'], category: 'free', type: 'dark',
