@@ -43,6 +43,10 @@ async function verifyLicenseCode(code) {
  * @param {function} callback - (unlocked: boolean) => void
  */
 function isPremiumUnlocked(callback) {
+  if (typeof chrome === 'undefined' || !chrome.storage) {
+    callback(false);
+    return;
+  }
   chrome.storage.local.get(PREMIUM_KEY, (data) => {
     callback(!!data[PREMIUM_KEY]);
   });
@@ -54,6 +58,10 @@ function isPremiumUnlocked(callback) {
  * @param {function} [callback]
  */
 function setPremiumUnlocked(unlocked, callback) {
+  if (typeof chrome === 'undefined' || !chrome.storage) {
+    if (callback) callback();
+    return;
+  }
   chrome.storage.local.set({ [PREMIUM_KEY]: unlocked }, () => {
     if (callback) callback();
   });

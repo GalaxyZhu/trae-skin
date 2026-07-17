@@ -189,6 +189,17 @@ document.querySelectorAll('.theme-action.free').forEach(function(btn) {
 
 // 应用主题到扩展：设置 active theme + 通知 content script + 记录已获取
 function applyThemeToExtension(themeId) {
+  // 非扩展环境（网站预览）只更新按钮状态
+  if (typeof chrome === 'undefined' || !chrome.storage) {
+    var btn0 = document.querySelector('.theme-action[data-theme-id="' + themeId + '"]');
+    if (btn0) {
+      var orig0 = btn0.textContent;
+      btn0.textContent = '已应用';
+      btn0.style.opacity = '0.6';
+      setTimeout(function() { btn0.textContent = orig0; btn0.style.opacity = ''; }, 1500);
+    }
+    return;
+  }
   // 1. 设置当前激活主题
   chrome.storage.local.set({ 'trae_skin_active': themeId }, function() {
     // 2. 记录到已获取主题列表（弹窗会读取这个列表显示额外主题）
